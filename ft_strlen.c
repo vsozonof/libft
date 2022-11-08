@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/18 15:21:59 by vsozonoff         #+#    #+#             */
-/*   Updated: 2022/11/03 19:06:51 by vsozonof         ###   ########.fr       */
+/*   Created: 2022/11/07 13:29:48 by vsozonof          #+#    #+#             */
+/*   Updated: 2022/11/07 17:37:19 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+size_t	ft_strlen(char *str)
 {
 	int	i;
 

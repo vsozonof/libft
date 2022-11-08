@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/31 22:09:30 by vsozonoff         #+#    #+#             */
-/*   Updated: 2022/11/03 19:06:23 by vsozonof         ###   ########.fr       */
+/*   Created: 2022/11/07 13:31:15 by vsozonof          #+#    #+#             */
+/*   Updated: 2022/11/08 18:58:16 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,3 +16,16 @@ void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);
 }
+
+/*int main()
+{
+	unsigned char p1[11] = "0123456789";
+	unsigned char p2[11] = "0123456789";
+	size_t n = 11;
+	
+	ft_bzero(p1, n);
+	printf("P1 = %s\n", p1);
+	bzero(p2, n);
+	printf("P2 = %s\n", p2);
+	
+}*/

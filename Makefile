@@ -6,14 +6,14 @@
 #    By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/04 21:33:43 by vsozonof          #+#    #+#              #
-#    Updated: 2022/11/04 21:33:44 by vsozonof         ###   ########.fr        #
+#    Updated: 2022/11/08 16:07:28 by vsozonof         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+GCC = gcc
+FLAGS = -Wall -Wextra -Werror
 AR = ar crs
 RM = rm -f
 NM = norminette
@@ -27,35 +27,32 @@ SRCS = 	ft_bzero.c\
 		ft_memcpy.c\
 		ft_memset.c\
 		ft_strlen.c\
-    
-
-SRCS_B = \
-    
+		ft_atoi.c\
+        
 OBJS = $(SRCS:.c=.o)
-OBJS_B = $(SRCS_B:.c=.o)
 
-.c.o: $(SRCS)
-    $(CC) $(CFLAGS) -c -o $@ $<
+%.o : %.c
+		$(GCC) $(FLAGS) -o $@ -c $<
 
-$(NAME): $(NAME) $(OBJS) $(OBJS_B)
-    $(AR) $@ $^
+$(NAME): $(OBJS)
+		$(AR) $@ $^
 
-norme: $(SRCS) $(SRCS_B)
-    $(NM) $@ $^
+norme: $(SRCS)
+		$(NM) $@ $^
 
 all: $(NAME)
 
 git: 
-    git add .
-    git commit -m "makefile"
-    git push
+		git add .
+		git commit -m "makefile"
+		git push
      
 clean:
-    $(RM) $(OBJS) $(OBJS_B)
+		$(RM) $(OBJS)
 
 fclean: clean
-    $(RM) $(NAME)
+		$(RM) $(NAME)
 
-re: clean all
+re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re norme
