@@ -6,13 +6,13 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 18:54:40 by vsozonof          #+#    #+#             */
-/*   Updated: 2022/11/09 06:47:25 by vsozonof         ###   ########.fr       */
+/*   Updated: 2022/11/09 10:26:36 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include	"libft.h"
 
-char *ft_strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
 	size_t	i;
 	char	*dup;
@@ -55,4 +55,3 @@ char *ft_strdup(const char *s)
 	free(str1);
 	free(str2);
 }*/
-	   

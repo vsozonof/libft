@@ -6,11 +6,11 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 13:30:10 by vsozonof          #+#    #+#             */
-/*   Updated: 2022/11/08 21:55:45 by vsozonof         ###   ########.fr       */
+/*   Updated: 2022/11/09 10:26:25 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include	"libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

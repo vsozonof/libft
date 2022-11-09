@@ -6,11 +6,11 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 17:26:20 by vsozonof          #+#    #+#             */
-/*   Updated: 2022/11/09 03:51:04 by vsozonof         ###   ########.fr       */
+/*   Updated: 2022/11/09 10:26:33 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include	"libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -20,7 +20,7 @@ char	*ft_strchr(const char *s, int c)
 	while (s[i])
 	{
 		if (s[i] == c)
-			return (&((unsigned char *)s)[i]);
+			return (&((char *)s)[i]);
 		i++;
 	}
 	return (NULL);

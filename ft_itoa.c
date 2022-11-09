@@ -1,38 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 13:29:57 by vsozonof          #+#    #+#             */
-/*   Updated: 2022/11/09 10:26:30 by vsozonof         ###   ########.fr       */
+/*   Created: 2022/11/09 10:29:29 by vsozonof          #+#    #+#             */
+/*   Updated: 2022/11/09 12:14:18 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+char	*ft_itoa(int n)
 {
-	size_t	i;
+	char	*str;
+	int		i;
 
-	i = 0;
-	while (i < n)
-	{
-		((unsigned char *)s)[i] = c;
-		i++;
-	}
-	return (s);
+	if (n == -2147483648)
+		return ("-2147483648");
+	else if (n == 0)
+		return ("0");
+	else if (n < 0)
 }
-
-/*int main()
-{
-	unsigned char p1[50] = "0123456789";
-	unsigned char p2[50] = "0123456789";
-	size_t n = 64;
-	ft_memset(p1, 'c', n);
-	printf("P1 = %s\n", p1);
-	memset(p2, 'c', n);
-	printf("P2 = %s\n", p2);
-	
-}*/
