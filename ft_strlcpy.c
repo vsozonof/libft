@@ -6,21 +6,19 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 13:41:04 by vsozonof          #+#    #+#             */
-/*   Updated: 2022/11/07 17:11:18 by vsozonof         ###   ########.fr       */
+/*   Updated: 2022/11/09 03:03:16 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_str_len(char *str)
+int	ft_str_len(const char *str)
 {
 	unsigned int	i;
 
 	i = 0;
 	while (str[i])
-	{
 		i++;
-	}
 	return (i);
 }
 
@@ -37,6 +35,8 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	{	
 		while (c < n - 1)
 		{
+			if (src[c] == '\0')
+				break ;
 			dest[c] = src[c];
 			c++;
 		}
@@ -44,3 +44,21 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	}
 	return (i);
 }
+
+/*int main()
+{
+	unsigned char p1[16] = "0123456789";
+	unsigned char p2[11] = "ABCDEFGHIJKLMNO";
+	unsigned char pp1[16] = "0123456789";
+	unsigned char pp2[11] = "ABCDEFGHIJKLMNO";
+	
+	size_t n = 0;
+	printf("P1 AVANT =  %s\n", p1);
+	ft_strlcpy(p1, p2, n);
+	printf("P1 APRES =  %s\n size = %li\n", p1, ft_strlcpy(p1, p2, n));
+	
+	printf("PP1 AVANT = %s\n", pp1);
+	strlcpy(pp1, pp2, n);
+	printf("PP1 APRES = %s\n size = %i\n", pp1, strlcpy(pp1, pp2, n));
+	
+}*/

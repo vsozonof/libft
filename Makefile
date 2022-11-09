@@ -6,7 +6,7 @@
 #    By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/04 21:33:43 by vsozonof          #+#    #+#              #
-#    Updated: 2022/11/08 16:07:28 by vsozonof         ###   ########.fr        #
+#    Updated: 2022/11/09 06:49:08 by vsozonof         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,7 @@ all: $(NAME)
 
 git: 
 		git add .
-		git commit -m "makefile"
+		git commit -m "tested + main in comment"
 		git push
      
 clean:

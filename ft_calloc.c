@@ -1,53 +1,56 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 18:54:40 by vsozonof          #+#    #+#             */
-/*   Updated: 2022/11/09 06:47:25 by vsozonof         ###   ########.fr       */
+/*   Created: 2022/11/09 05:56:13 by vsozonof          #+#    #+#             */
+/*   Updated: 2022/11/09 06:33:41 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strdup(const char *s)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
+	char	*tab;
 	size_t	i;
-	char	*dup;
 
-	i = ft_strlen((char *)s);
-	dup = malloc (sizeof(char) * i);
-	if (!dup)
+	i = 0;
+	if (nmemb == 0 || size == 0)
 		return (NULL);
-	i = -1;
-	while (s[++i])
-		dup[i] = s[i];
-	return (dup);
+	tab = malloc(sizeof((size) * nmemb));
+	if (!tab)
+		return (NULL);
+	while (tab[i])
+	{
+		tab[i] = 0;
+		i++;
+	}
+	return (tab);
 }
 
 /*int main()
 {
-	size_t nb = 30;
+	size_t nb = 15;
 	size_t i = 0;
 	size_t j = 0;
-	char *str = "manger du pain avec les dents";
-	
-	char *str1 = ft_strdup(str);
-	char *str2 = strdup(str);
+
+	char *str1 = ft_calloc(nb, sizeof(char));
+	char *str2 = calloc(nb, sizeof(char));
 	
 	printf("[MA FONCTION]\n");
 	while (i < nb)
 	{
-		printf("%c", str1[i]);
+		printf("%d", str1[i]);
 		i++;
 	}
 	printf("\n");
 	printf("[VRAIE FONCTION]\n");
 	while (j < nb)
 	{
-		printf("%c", str2[j]);
+		printf("%d", str2[j]);
 		j++;
 	}
 	printf("\n");
@@ -55,4 +58,3 @@ char *ft_strdup(const char *s)
 	free(str1);
 	free(str2);
 }*/
-	   

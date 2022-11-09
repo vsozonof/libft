@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 22:14:34 by vsozonoff         #+#    #+#             */
-/*   Updated: 2022/11/08 18:57:27 by vsozonof         ###   ########.fr       */
+/*   Updated: 2022/11/09 05:07:11 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <ctype.h>
 # include <string.h>
 # include <strings.h>
-
+# include <bsd/string.h>
 
 int		ft_isprint(int c);
 int		ft_isdigit(int c);

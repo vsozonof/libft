@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 13:36:24 by vsozonof          #+#    #+#             */
-/*   Updated: 2022/11/07 13:36:43 by vsozonof         ###   ########.fr       */
+/*   Updated: 2022/11/09 03:15:33 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,17 @@
 int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
-		return (c + 48);
+		return (c + 32);
 	else
 		return (c);
 }
+
+/*int main()
+{
+	printf("%c\n", ft_tolower('a'));
+	printf("%c\n", ft_tolower('A'));
+	printf("%c\n", ft_tolower('f'));
+	printf("%c\n", ft_tolower('F'));
+	printf("%c\n", ft_tolower('z'));
+	printf("%c\n", ft_tolower('Z'));
+}*/
