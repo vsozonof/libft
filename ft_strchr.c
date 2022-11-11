@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 17:26:20 by vsozonof          #+#    #+#             */
-/*   Updated: 2022/11/09 10:26:33 by vsozonof         ###   ########.fr       */
+/*   Updated: 2022/11/11 00:45:58 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,11 @@ char	*ft_strchr(const char *s, int c)
 {
 	int	i;
 
-	i = 0;
-	while (s[i])
+	i = -1;
+	while (s[++i])
 	{
 		if (s[i] == c)
-			return (&((char *)s)[i]);
-		i++;
+			return ((char *)(s + i));
 	}
 	return (NULL);
 }

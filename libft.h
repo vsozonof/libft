@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 22:14:34 by vsozonoff         #+#    #+#             */
-/*   Updated: 2022/11/09 10:49:49 by vsozonof         ###   ########.fr       */
+/*   Updated: 2022/11/11 00:58:23 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 # define LIBFT_H
 # include <stdlib.h>
 
-/* pour tester proprement les fonctions
 # include <stdio.h>
 # include <ctype.h>
 # include <string.h>
-# include <strings.h>	
-# include <bsd/string.h>
-*/
+# include <strings.h>
+# include <unistd.h>
+
+
 
 int		ft_isdigit(int c);
 int		ft_isascii(int c);

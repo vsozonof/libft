@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 05:56:13 by vsozonof          #+#    #+#             */
-/*   Updated: 2022/11/09 10:25:47 by vsozonof         ###   ########.fr       */
+/*   Updated: 2022/11/10 18:44:16 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,14 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	char	*tab;
-	size_t	i;
+	void	*tab;
 
-	i = 0;
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-	tab = malloc(sizeof((size) * nmemb));
+	tab = malloc(sizeof((nmemb) * size));
 	if (!tab)
 		return (NULL);
-	while (tab[i])
-	{
-		tab[i] = 0;
-		i++;
-	}
+	ft_bzero(tab, size * nmemb);
 	return (tab);
 }
 
