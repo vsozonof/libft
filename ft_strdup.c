@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 18:54:40 by vsozonof          #+#    #+#             */
-/*   Updated: 2022/11/09 10:26:36 by vsozonof         ###   ########.fr       */
+/*   Updated: 2022/11/11 19:19:49 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,13 @@ char	*ft_strdup(const char *s)
 	char	*dup;
 
 	i = ft_strlen((char *)s);
-	dup = malloc (sizeof(char) * i);
+	dup = malloc (sizeof(char) * i + 1);
 	if (!dup)
 		return (NULL);
 	i = -1;
 	while (s[++i])
 		dup[i] = s[i];
+	dup[i] = '\0';
 	return (dup);
 }
 

@@ -6,21 +6,18 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 22:14:34 by vsozonoff         #+#    #+#             */
-/*   Updated: 2022/11/11 00:58:23 by vsozonof         ###   ########.fr       */
+/*   Updated: 2022/11/11 17:06:26 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
-
 # include <stdio.h>
 # include <ctype.h>
 # include <string.h>
 # include <strings.h>
 # include <unistd.h>
-
-
 
 int		ft_isdigit(int c);
 int		ft_isascii(int c);
@@ -39,8 +36,8 @@ void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
 void	ft_bzero(void *s, size_t n);
 void	ft_bzero(void *s, size_t n);
-char	*strchr(const char *s, int c);
-char	*strrchr(const char *s, int c);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *s1, const char *s2, size_t len);
 char	*ft_strdup(const char *s);
 size_t	ft_strlen(char *str);
