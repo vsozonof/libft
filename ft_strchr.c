@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 17:26:20 by vsozonof          #+#    #+#             */
-/*   Updated: 2022/11/11 23:07:18 by vsozonof         ###   ########.fr       */
+/*   Updated: 2022/11/12 01:58:05 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strchr(const char *s, int c)
 
 	i = 0;
 	if (c == 0)
-		return (s + ft_strlen(s));
+		return ((char *)(s + ft_strlen((char *)s)));
 	while (s[i])
 	{
 		if (s[i] == c)

@@ -6,21 +6,11 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 13:41:04 by vsozonof          #+#    #+#             */
-/*   Updated: 2022/11/09 10:26:42 by vsozonof         ###   ########.fr       */
+/*   Updated: 2022/11/12 11:49:30 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"libft.h"
-
-int	ft_str_len(const char *str)
-{
-	unsigned int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
@@ -29,7 +19,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	unsigned int			n;
 
 	n = (unsigned int)size;
-	i = ft_str_len(src);
+	i = ft_strlen((char *)src);
 	c = 0;
 	if (n > 0)
 	{	
