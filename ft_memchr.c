@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 17:57:41 by vsozonof          #+#    #+#             */
-/*   Updated: 2022/11/12 11:47:51 by vsozonof         ###   ########.fr       */
+/*   Updated: 2022/11/14 17:24:02 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,40 @@
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*str;
-	unsigned char	letter;
 	size_t			i;
 
 	i = 0;
 	str = (unsigned char *)s;
-	letter = (char)c;
+	if (n == 0)
+		return (NULL);
 	while (str[i] && i < n)
 	{
-		if (str[i] == letter)
+		if (str[i] == (unsigned char)c)
 			return (&str[i]);
 		else
 			i++;
 	}
+	if ((unsigned char)c == 0)
+		return (&str[i]);
 	return (NULL);
 }
 
 /*int main()
 {
-	char data[] = "pas d'anavnas sur la pizza svp";
-	size_t size = 30;
-	char *return_value;
-	char c = 'v';
+	char s[] = {'a', 'b', 'c' , 'd', 'e', 'f'};
+	printf("%p\n", ft_memchr(s, 97, 0));
+	printf("%p\n", ft_memchr(s, 97, 1));
+	printf("%p\n", ft_memchr(s, 99, 3));
+	printf("%p\n", ft_memchr(s, 102, 6));
+	printf("%p\n", ft_memchr(s, 99 + 256, 3));
+}*/
+
+/*int main()
+{
+	unsigned char data[] = {'a', 'b', 'c', 'd', 'e', 'f'};
+	size_t size = 3;
+	unsigned char *return_value;
+	unsigned char c = 99 + 256;
 	printf("[STRING] = %s\n", data);
 	printf("[MA FONCTION] cherche la premiere occurence de %c dans la string\n",
 	 c);
