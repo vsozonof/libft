@@ -6,7 +6,7 @@
 #    By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/04 21:33:43 by vsozonof          #+#    #+#              #
-#    Updated: 2022/11/14 17:24:18 by vsozonof         ###   ########.fr        #
+#    Updated: 2022/11/16 15:43:58 by vsozonof         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,7 +57,7 @@ all: $(NAME)
 
 git: 
 		git add .
-		git commit -m "JE VOUDRAIS UN BONHOMME DE NEIGE"
+		git commit -m "fix calloc and strlcat stp moi du futur"
 		git push
      
 clean:

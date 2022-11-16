@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 18:24:16 by vsozonof          #+#    #+#             */
-/*   Updated: 2022/11/09 10:26:52 by vsozonof         ###   ########.fr       */
+/*   Updated: 2022/11/16 14:53:14 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 
 	j = 0;
 	i = 0;
+	if (!(s1) && !(s2))
+		return (NULL);
 	if (s2[i] == '\0')
 		return ((char *)s1);
 	while (s1[i] && (i < len))
@@ -37,15 +39,3 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 	}
 	return (NULL);
 }
-
-/*int main()
-{
-	char *haystack = "c ch c chiens ch chi chien ch c chie chiens";
-	char *needle = "chiens";
-	size_t size = 50;
-	printf("[LA STRING] = %s\n", haystack);
-	printf("[MA FONCTION] cherche %s dans la string -> resultat : %s\n",
-	 needle, ft_strnstr(haystack, needle, size));
-	printf("[VRAIE FONCTION(oupas)] cherche %s dans la string -> resultat ; %s\n",
-	 needle, strnstr(haystack, needle, size));	
-}*/

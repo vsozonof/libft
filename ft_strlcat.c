@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 18:54:30 by vsozonof          #+#    #+#             */
-/*   Updated: 2022/11/09 10:26:40 by vsozonof         ###   ########.fr       */
+/*   Updated: 2022/11/16 14:33:16 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,22 +39,23 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	char str1[] = "This is a ";
 	char str2[] = "potentially long string";
-	int size = 34;
+	int size = 2;
 	int return_value;
-	char buffer[34];
+	char buffer_1[5];
+	char buffer_2[5];
 
 	printf("[MA FONCTION]\n");
-	strcpy(buffer, str1);
-	printf("STRING APRES COPIE : %s\n", buffer);	
-	return_value = ft_strlcat(buffer, str2, size);
-	printf("STRING APRES STRLCAT : %s\n", buffer);
+	strcpy(buffer_1, str1);
+	printf("STRING APRES COPIE : %s\n", buffer_1);	
+	return_value = ft_strlcat(buffer_1, str2, size);
+	printf("STRING APRES STRLCAT : %s\n", buffer_1);
 	printf("Valeur retournee par strlcat : %i\n", return_value);
 
 
 	printf("[VRAIE FONCTION]\n");
-	strcpy(buffer, str1);
-	printf("STRING APRES COPIE : %s\n", buffer);	
-	return_value = strlcat(buffer, str2, size);
-	printf("STRING APRES STRLCAT : %s\n", buffer);
+	strcpy(buffer_2, str1);
+	printf("STRING APRES COPIE : %s\n", buffer_2);	
+	return_value = strlcat(buffer_2, str2, size);
+	printf("STRING APRES STRLCAT : %s\n", buffer_2);
 	printf("Valeur retournee par strlcat : %i\n", return_value);
 }*/

@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 17:57:41 by vsozonof          #+#    #+#             */
-/*   Updated: 2022/11/15 20:46:18 by vsozonof         ###   ########.fr       */
+/*   Updated: 2022/11/16 14:19:02 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	p = (unsigned char *)s;
 	i = 0;
+	if (!s)
+		return (NULL);
 	while (i < n)
 	{
 		if (*(p + i) == (unsigned char)c)

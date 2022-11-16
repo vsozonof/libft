@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 13:31:05 by vsozonof          #+#    #+#             */
-/*   Updated: 2022/11/09 10:25:50 by vsozonof         ###   ########.fr       */
+/*   Updated: 2022/11/16 14:49:45 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,5 @@
 
 int	ft_isalnum(int c)
 {
-	if (ft_isdigit(c) == 1 || ft_isalpha(c) == 1)
-		return (1);
-	else
-		return (0);
+	return ((ft_isdigit(c)) || (ft_isalpha(c)));
 }

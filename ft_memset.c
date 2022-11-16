@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 13:29:57 by vsozonof          #+#    #+#             */
-/*   Updated: 2022/11/15 19:43:59 by vsozonof         ###   ########.fr       */
+/*   Updated: 2022/11/16 14:20:10 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memset(void *s, int c, size_t n)
 	size_t	i;
 
 	i = -1;
+	if (!(s))
+		return (NULL);
 	while (++i < n)
 		((unsigned char *)s)[i] = c;
 	return (s);

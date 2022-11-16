@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 17:34:23 by vsozonof          #+#    #+#             */
-/*   Updated: 2022/11/11 00:31:01 by vsozonof         ###   ########.fr       */
+/*   Updated: 2022/11/16 14:45:11 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,24 +16,14 @@ char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 
+	if (!(s))
+		return (NULL);
 	i = ft_strlen((char *)s);
 	while (i >= 0)
 	{
-		if (s[i] == c)
+		if (s[i] == (unsigned char)c)
 			return ((char *)(s + i));
 		i--;
 	}
 	return (NULL);
 }
-
-/*
-int main()
-{
-	const char *str = "Haabasrthaaberterehtaabaaagseahaaa";
-	char lettre = 'H';
-	printf("STRING ORIGINALE = %s\n", str);
-	printf("[MA FONCTION] PREMIERE OCCURENCE DE %c dans la string : %s\n", 
-	lettre, ft_strrchr(str, lettre));
-	printf("[VRAIE FONCTION]PREMIERE OCCURENCE DE %c dans la string : %s\n", 
-	lettre, ft_strrchr(str, lettre));
-}*/
