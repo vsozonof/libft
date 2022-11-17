@@ -6,22 +6,19 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 10:29:29 by vsozonof          #+#    #+#             */
-/*   Updated: 2022/11/16 15:35:15 by vsozonof         ###   ########.fr       */
+/*   Updated: 2022/11/17 19:03:53 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-
-int	nb_len(int n)
+int	nb_len(long int n)
 {
 	int	c;
 
 	c = 0;
 	if (n == 0)
 		return (1);
-	else if (n == INT_MIN)
-		return (12);
 	else if (n < 0)
 	{
 		c++;
@@ -37,15 +34,25 @@ int	nb_len(int n)
 
 char	*ft_itoa(int n)
 {
-	int		len;
-	char	*str;
+	int			len;
+	char		*str;
+	long int	nbr;
 
-	len = nb_len(n);
-	
-	
-}
-
-int main(void)
-{
-	printf("%i\n", nb_len(0));
+	nbr = n;
+	len = nb_len(nbr);
+	if (nbr < 0)
+		nbr *= -1;
+	str = malloc(sizeof(char) * len + 1);
+	if (!(str))
+		return (NULL);
+	str[len] = '\0';
+	while (len - 1 >= 0)
+	{
+		str[len - 1] = (nbr % 10) + '0';
+		nbr /= 10;
+		len--;
+	}
+	if (n < 0)
+		str[0] = '-';
+	return (str);
 }

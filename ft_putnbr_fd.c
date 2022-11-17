@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/17 16:19:39 by vsozonof          #+#    #+#             */
-/*   Updated: 2022/11/17 16:20:03 by vsozonof         ###   ########.fr       */
+/*   Created: 2022/11/17 19:15:43 by vsozonof          #+#    #+#             */
+/*   Updated: 2022/11/17 19:46:15 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int	i;
-
-	if (!(s))
-		return (NULL);
-	i = ft_strlen((char *)s);
-	while (i >= 0)
+	if (n == -2147483648)
+		ft_putstr_fd("-2147483648", fd);
+	else if (n >= 0 && n < 10)
+		ft_putchar_fd(n + '0', fd);
+	else if (n < 0)
 	{
-		if (s[i] == (unsigned char)c)
-			return ((char *)(s + i));
-		i--;
+		ft_putchar_fd('-', fd);
+		ft_putnbr_fd(n * (-1), fd);
 	}
-	return (NULL);
+	else
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
+	}
 }

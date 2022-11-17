@@ -6,7 +6,7 @@
 #    By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/04 21:33:43 by vsozonof          #+#    #+#              #
-#    Updated: 2022/11/16 15:43:58 by vsozonof         ###   ########.fr        #
+#    Updated: 2022/11/17 19:51:06 by vsozonof         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,11 @@ SRCS = 	ft_isalpha.c\
 		ft_bzero.c\
 		ft_atoi.c\
 		ft_calloc.c\
+		ft_itoa.c\
+		ft_putchar_fd.c\
+		ft_putnbr_fd.c\
+		ft_putstr_fd.c\
+		ft_putendl_fd.c\
         
 OBJS = $(SRCS:.c=.o)
 
