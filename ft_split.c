@@ -1,24 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/17 20:06:56 by vsozonof          #+#    #+#             */
-/*   Updated: 2022/11/18 12:23:39 by vsozonof         ###   ########.fr       */
+/*   Created: 2022/11/18 13:46:43 by vsozonof          #+#    #+#             */
+/*   Updated: 2022/11/18 14:29:23 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+int	ft_word_counter(char *s, char c)
 {
 	unsigned int	i;
+	unsigned int	j;
 
-	if (!(s))
-		return ;
 	i = -1;
+	j = 0;
 	while (s[++i])
-		f(i, &s[i]);
+	{
+		if (s[i] == c && s[i + i] != '\0')
+			j++;
+	}
+	return (j);
+}
+
+char	**ft_split(char const *s, char c)
+{
+}
+
+int main()
+{
+	printf("%i\n", ft_word_counter("               je", ' '));
 }
