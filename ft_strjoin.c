@@ -1,31 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 17:26:20 by vsozonof          #+#    #+#             */
-/*   Updated: 2022/11/19 11:18:15 by vsozonof         ###   ########.fr       */
+/*   Created: 2022/11/19 09:45:48 by vsozonof          #+#    #+#             */
+/*   Updated: 2022/11/19 10:57:28 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int	i;
+	char	*str;
+	size_t	len;
+	size_t	i;
 
-	i = 0;
-	if (!(s))
+	if (!(s1) && !(s2))
 		return (NULL);
-	while (s[i])
+	len = (ft_strlen(s1) + ft_strlen(s2));
+	str = malloc(sizeof(char) * len + 1);
+	if (!(str))
+		return (NULL);
+	len = -1;
+	while (++len < ft_strlen(s1))
+		str[len] = s1[len];
+	i = 0;
+	while (len < (ft_strlen(s2) + ft_strlen(s1)))
 	{
-		if (s[i] == (unsigned char)c)
-			return ((char *)(s + i));
+		str[len] = s2[i];
+		len++;
 		i++;
 	}
-	if ((unsigned char)c == 0)
-		return ((char *)(s + i));
-	return (NULL);
+	str[len] = '\0';
+	return (str);
 }
