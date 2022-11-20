@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 13:46:43 by vsozonof          #+#    #+#             */
-/*   Updated: 2022/11/18 14:29:23 by vsozonof         ###   ########.fr       */
+/*   Updated: 2022/11/20 17:16:24 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ int	ft_word_counter(char *s, char c)
 	}
 	return (j);
 }
+
+char	**ft_free  12
 
 char	**ft_split(char const *s, char c)
 {

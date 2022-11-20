@@ -6,7 +6,7 @@
 #    By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/04 21:33:43 by vsozonof          #+#    #+#              #
-#    Updated: 2022/11/19 10:05:09 by vsozonof         ###   ########.fr        #
+#    Updated: 2022/11/19 22:29:05 by vsozonof         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,6 +50,7 @@ SRCS = 	ft_isalpha.c\
 		ft_strmapi.c\
 		ft_substr.c\
 		ft_strjoin.c\
+		ft_strtrim.c\
         
 OBJS = $(SRCS:.c=.o)
 
