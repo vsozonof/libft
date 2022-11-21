@@ -6,12 +6,13 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 22:14:34 by vsozonoff         #+#    #+#             */
-/*   Updated: 2022/11/19 22:28:54 by vsozonof         ###   ########.fr       */
+/*   Updated: 2022/11/20 20:53:57 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# include <bsd/string.h>
 # include <stdlib.h>
 # include <limits.h>
 # include <stddef.h>
