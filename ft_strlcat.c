@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 18:54:30 by vsozonof          #+#    #+#             */
-/*   Updated: 2022/11/20 21:08:20 by vsozonof         ###   ########.fr       */
+/*   Updated: 2022/11/21 18:41:03 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	i;
 
 	len = 0;
-	if (!(dst) || !(src))
-		return (0);
-	else if (size == 0)
+	if (size == 0)
 		return (len + ft_strlen(src));
 	while (dst[len] && len < size)
 		len++;

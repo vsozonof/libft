@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 22:14:34 by vsozonoff         #+#    #+#             */
-/*   Updated: 2022/11/20 20:53:57 by vsozonof         ###   ########.fr       */
+/*   Updated: 2022/11/21 17:55:00 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t len);
 char	*ft_strdup(const char *s);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strtrim(char const *s1, char const *set);
+char	**ft_split(char const *s, char c);
 size_t	ft_strlen(const char *str);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
