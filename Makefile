@@ -6,7 +6,7 @@
 #    By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/04 21:33:43 by vsozonof          #+#    #+#              #
-#    Updated: 2022/11/22 18:38:18 by vsozonof         ###   ########.fr        #
+#    Updated: 2022/11/22 20:48:08 by vsozonof         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,6 +55,10 @@ SRCS = 	ft_isalpha.c\
         
 OBJS = $(SRCS:.c=.o)
 
+BONUS = ft_lstnew.c\
+
+BONUS_OBJS = $(BONUS:.c=.o)
+
 %.o : %.c
 		$(GCC) $(FLAGS) -o $@ -c $<
 
@@ -65,6 +69,9 @@ norme: $(SRCS)
 		$(NM) $@ $^
 
 all: $(NAME)
+
+bonus : $(OBJS) $(BONUS_OBJS)
+		$(AR) $(OBJS) $(BONUS_OBJS)
 
 git: 
 		git add .
