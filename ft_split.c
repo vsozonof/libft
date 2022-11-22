@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 13:46:43 by vsozonof          #+#    #+#             */
-/*   Updated: 2022/11/22 17:05:35 by vsozonof         ###   ########.fr       */
+/*   Updated: 2022/11/22 19:03:48 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,13 +98,15 @@ char	**ft_split(char const *s, char c)
 	size_t	i;
 	size_t	len;
 
+	if (!s)
+		return (NULL);
 	len = ft_word_counter(s, c);
-	if (len == 1 || !(s) || s[0] == 0)
+	if (len == 1 || s[0] == 0)
 	{
 		tab = malloc(sizeof(NULL));
 		if (!(tab))
 			return (NULL);
-		tab[0] = '\0';
+		tab[0] = NULL;
 		return (tab);
 	}
 	tab = malloc(sizeof(char *) * len);

@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 22:14:34 by vsozonoff         #+#    #+#             */
-/*   Updated: 2022/11/21 17:55:00 by vsozonof         ###   ########.fr       */
+/*   Updated: 2022/11/22 18:19:26 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,13 @@ char	**ft_split(char const *s, char c);
 size_t	ft_strlen(const char *str);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
+
+typedef struct s_list
+{
+	void				*content;
+	struct s_list		*next;
+}						t_list;
+
+t_list	*ft_lstnew(void *content);
 
 #endif
