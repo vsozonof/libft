@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 18:54:30 by vsozonof          #+#    #+#             */
-/*   Updated: 2022/11/21 18:41:03 by vsozonof         ###   ########.fr       */
+/*   Updated: 2022/11/22 17:18:38 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		dst[i] = src[i - len];
 		i++;
 	}
-	if (i < size - 1)
+	if (i < size)
 		dst[i] = '\0';
 	return (len + ft_strlen(src));
 }
