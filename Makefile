@@ -6,7 +6,7 @@
 #    By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/04 21:33:43 by vsozonof          #+#    #+#              #
-#    Updated: 2022/11/22 20:49:58 by vsozonof         ###   ########.fr        #
+#    Updated: 2022/11/23 17:00:36 by vsozonof         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ FLAGS = -Wall -Wextra -Werror
 AR = ar crs
 RM = rm -f
 NM = norminette
+HEADER = libft.h \
 
 SRCS = 	ft_isalpha.c\
 		ft_isdigit.c\
@@ -53,19 +54,20 @@ SRCS = 	ft_isalpha.c\
 		ft_strtrim.c\
 		ft_split.c\
         
-OBJS = $(SRCS:.c=.o)
-
 BONUS = ft_lstnew.c\
+		ft_lstsize.c\
+		ft_lstlast.c\
 
+OBJS = $(SRCS:.c=.o)
 BONUS_OBJS = $(BONUS:.c=.o)
-
-%.o : %.c
-		$(GCC) $(FLAGS) -o $@ -c $<
 
 $(NAME): $(OBJS)
 		$(AR) $@ $^
 
-norme: $(SRCS)
+bonus: $(BONUS_OBJS)
+		$(AR) $(NAME) $^
+
+norme: $(SRCS) $(BONUS) $(HEADER)
 		$(NM) $@ $^
 
 all: $(NAME)
@@ -76,11 +78,11 @@ git:
 		git push
      
 clean:
-		$(RM) $(OBJS)
+		$(RM) $(OBJS) $(BONUS_OBJS)
 
 fclean: clean
 		$(RM) $(NAME)
 
-re: fclean norme all
+re: fclean all
 
-.PHONY: all clean fclean re norme
+.PHONY: all clean fclean re norme bonus
