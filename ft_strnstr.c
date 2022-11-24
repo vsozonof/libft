@@ -19,7 +19,7 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 
 	j = 0;
 	i = 0;
-	if (!(s1) && !(s2))
+	if (!(s1) || !(s2) && len == 0)
 		return (NULL);
 	if (s2[i] == '\0')
 		return ((char *)s1);
