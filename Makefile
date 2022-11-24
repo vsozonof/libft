@@ -6,7 +6,7 @@
 #    By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/04 21:33:43 by vsozonof          #+#    #+#              #
-#    Updated: 2022/11/23 17:00:36 by vsozonof         ###   ########.fr        #
+#    Updated: 2022/11/24 03:08:37 by vsozonof         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,6 +57,12 @@ SRCS = 	ft_isalpha.c\
 BONUS = ft_lstnew.c\
 		ft_lstsize.c\
 		ft_lstlast.c\
+		ft_lstadd_front.c\
+		ft_lstadd_back.c\
+		ft_lstdelone.c\
+		ft_lstiter.c\
+		ft_lstclear.c\
+		ft_lstmap.c\
 
 OBJS = $(SRCS:.c=.o)
 BONUS_OBJS = $(BONUS:.c=.o)
