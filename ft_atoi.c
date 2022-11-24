@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 13:31:24 by vsozonof          #+#    #+#             */
-/*   Updated: 2022/11/24 07:31:42 by vsozonof         ###   ########.fr       */
+/*   Updated: 2022/11/24 08:32:35 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ int	ft_atoi(const char *str)
 	i = 0;
 	sign = 1;
 	var = 0;
-	if (!str || !*str)
-		return (0);
 	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
 		i++;
 	if (str[i] == '+' || str[i] == '-')
