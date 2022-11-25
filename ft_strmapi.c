@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 12:23:55 by vsozonof          #+#    #+#             */
-/*   Updated: 2022/11/24 11:58:33 by vsozonof         ###   ########.fr       */
+/*   Updated: 2022/11/25 12:24:32 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*str;
 
 	len = ft_strlen(s);
-	if (!(s))
-		return (ft_strdup(""));
-	str = malloc(sizeof(char) * len + 1);
+	if (!(s) && !(f))
+		return (NULL);
+	str = malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
 	i = -1;

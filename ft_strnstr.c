@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 18:24:16 by vsozonof          #+#    #+#             */
-/*   Updated: 2022/11/16 14:53:14 by vsozonof         ###   ########.fr       */
+/*   Updated: 2022/11/25 12:26:58 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 
 	j = 0;
 	i = 0;
-	if (!(s1) || !(s2) && len == 0)
+	if ((!(s1) || !(s2)) && len == 0)
 		return (NULL);
 	if (s2[i] == '\0')
 		return ((char *)s1);

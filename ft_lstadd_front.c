@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 21:52:40 by vsozonof          #+#    #+#             */
-/*   Updated: 2022/11/24 07:31:56 by vsozonof         ###   ########.fr       */
+/*   Updated: 2022/11/25 10:39:44 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
+	if (!(lst) && !(new))
+		return ;
 	new->next = *lst;
 	*lst = new;
 }

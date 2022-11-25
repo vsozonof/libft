@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 10:58:04 by vsozonof          #+#    #+#             */
-/*   Updated: 2022/11/19 23:22:03 by vsozonof         ###   ########.fr       */
+/*   Updated: 2022/11/25 12:05:00 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		j;
 
 	j = 0;
-	if (ft_valid_set_checker(s1, set) == 1 || (!(s1) || !(set)))
+	if ((!(s1) || !(set)) || ft_valid_set_checker(s1, set) == 1)
 		return (ft_calloc(sizeof(char), 1));
 	i = ft_trim_front(s1, set);
 	len = (ft_strlen(s1) - (ft_trim_front(s1, set) + ft_trim_back(s1, set)));
